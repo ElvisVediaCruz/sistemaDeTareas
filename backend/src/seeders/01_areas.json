@@ -1,0 +1,10 @@
+// API: POST /api/areas/
+// Requiere token de administrador: Authorization: Bearer <token>
+// Insertar en este orden primero (sin dependencias FK)
+[
+  { "nombre": "Desarrollo" },
+  { "nombre": "Diseño" },
+  { "nombre": "Marketing" },
+  { "nombre": "Recursos Humanos" },
+  { "nombre": "QA" }
+]

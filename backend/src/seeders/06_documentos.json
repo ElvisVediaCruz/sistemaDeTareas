@@ -1,0 +1,54 @@
+// API: POST /api/documentos/
+// Requiere token (cualquier rol): Authorization: Bearer <token>
+// Depende de: tareas (05) — insertar al final
+//
+// NOTA: La API real usa multipart/form-data con multer (campo "archivo").
+//       Este JSON representa los metadatos del documento; la URL es la ruta
+//       generada por multer en /uploads/. Para pruebas directas en BD, usar
+//       una URL de ejemplo.
+//
+// id_tarea según 05_tareas.json (orden de inserción):
+//   1 = Levantar requerimientos del portal
+//   2 = Diseño de wireframes
+//   3 = Desarrollo módulo autenticación
+//   5 = Definir arquitectura app
+//   9 = Análisis de mercado objetivo
+//   11 = Inventario de servicios actuales
+[
+  {
+    "nombre": "Documento de requerimientos v1.0",
+    "url": "/uploads/requerimientos_portal_v1.pdf",
+    "fecha": "2026-01-18",
+    "id_tarea": 1
+  },
+  {
+    "nombre": "Wireframes portal web",
+    "url": "/uploads/wireframes_portal.fig",
+    "fecha": "2026-02-08",
+    "id_tarea": 2
+  },
+  {
+    "nombre": "Wireframes portal web v2",
+    "url": "/uploads/wireframes_portal_v2.fig",
+    "fecha": "2026-02-09",
+    "id_tarea": 2
+  },
+  {
+    "nombre": "Diagrama de arquitectura app",
+    "url": "/uploads/arquitectura_app_movil.pdf",
+    "fecha": "2026-02-19",
+    "id_tarea": 5
+  },
+  {
+    "nombre": "Informe análisis de mercado",
+    "url": "/uploads/analisis_mercado_q2.xlsx",
+    "fecha": "2026-03-25",
+    "id_tarea": 9
+  },
+  {
+    "nombre": "Inventario de servicios - borrador",
+    "url": "/uploads/inventario_servicios.xlsx",
+    "fecha": "2025-11-28",
+    "id_tarea": 11
+  }
+]

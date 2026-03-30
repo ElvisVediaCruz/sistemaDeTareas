@@ -1,0 +1,23 @@
+// API: POST /api/area-proyectos/
+// Requiere token de administrador: Authorization: Bearer <token>
+// Depende de: areas (01) y proyectos (03) — insertar después de ambos
+//
+// Relación muchos-a-muchos entre áreas y proyectos
+// id_area:    1=Desarrollo | 2=Diseño | 3=Marketing | 4=RRHH | 5=QA
+// id_proyecto: 1=Portal Web | 2=App Móvil | 3=Campaña Q2 | 4=Migración Nube | 5=Onboarding
+[
+  { "id_area": 1, "id_proyecto": 1 },
+  { "id_area": 2, "id_proyecto": 1 },
+  { "id_area": 5, "id_proyecto": 1 },
+
+  { "id_area": 1, "id_proyecto": 2 },
+  { "id_area": 2, "id_proyecto": 2 },
+  { "id_area": 5, "id_proyecto": 2 },
+
+  { "id_area": 3, "id_proyecto": 3 },
+
+  { "id_area": 1, "id_proyecto": 4 },
+  { "id_area": 5, "id_proyecto": 4 },
+
+  { "id_area": 4, "id_proyecto": 5 }
+]

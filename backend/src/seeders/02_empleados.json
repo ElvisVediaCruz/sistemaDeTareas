@@ -1,0 +1,150 @@
+// API: POST /api/auth/register  (para crear el primer admin sin token)
+//   ó  POST /api/empleados/      (requiere token de administrador)
+//
+// IMPORTANTE: Las contraseñas deben estar hasheadas con bcrypt antes de insertar
+//             directamente en BD. Si usas la API /register o /empleados, envíalas
+//             en texto plano y el backend las hashea automáticamente.
+//
+// Orden de inserción:
+//   1. Primero los que NO tienen id_jefe (administradores y encargados raíz)
+//   2. Luego los empleados con id_jefe asignado
+//
+// --- PASO 1: Administrador (sin id_jefe) ---
+[
+  {
+    "nombre": "Carlos",
+    "apellido": "Mendoza",
+    "edad": 38,
+    "usuario": "cmendoza",
+    "password": "Admin1234!",
+    "cargo": "Gerente General",
+    "tipo": "administrador",
+    "id_area": 1,
+    "id_jefe": null
+  },
+
+  // --- PASO 2: Encargados por área (id_jefe -> id_empleado del admin = 1) ---
+  {
+    "nombre": "Laura",
+    "apellido": "Torres",
+    "edad": 32,
+    "usuario": "ltorres",
+    "password": "Encargado1!",
+    "cargo": "Líder de Desarrollo",
+    "tipo": "encargado",
+    "id_area": 1,
+    "id_jefe": 1
+  },
+  {
+    "nombre": "Marco",
+    "apellido": "Ríos",
+    "edad": 35,
+    "usuario": "mrios",
+    "password": "Encargado2!",
+    "cargo": "Líder de Diseño",
+    "tipo": "encargado",
+    "id_area": 2,
+    "id_jefe": 1
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Vargas",
+    "edad": 30,
+    "usuario": "svargas",
+    "password": "Encargado3!",
+    "cargo": "Líder de Marketing",
+    "tipo": "encargado",
+    "id_area": 3,
+    "id_jefe": 1
+  },
+  {
+    "nombre": "Diego",
+    "apellido": "Castillo",
+    "edad": 40,
+    "usuario": "dcastillo",
+    "password": "Encargado4!",
+    "cargo": "Líder de RRHH",
+    "tipo": "encargado",
+    "id_area": 4,
+    "id_jefe": 1
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Fuentes",
+    "edad": 29,
+    "usuario": "afuentes",
+    "password": "Encargado5!",
+    "cargo": "Líder de QA",
+    "tipo": "encargado",
+    "id_area": 5,
+    "id_jefe": 1
+  },
+
+  // --- PASO 3: Empleados regulares (id_jefe -> id del encargado de su área) ---
+  {
+    "nombre": "Pedro",
+    "apellido": "Gómez",
+    "edad": 25,
+    "usuario": "pgomez",
+    "password": "Empleado1!",
+    "cargo": "Desarrollador Backend",
+    "tipo": "empleado",
+    "id_area": 1,
+    "id_jefe": 2
+  },
+  {
+    "nombre": "Valentina",
+    "apellido": "Herrera",
+    "edad": 27,
+    "usuario": "vherrera",
+    "password": "Empleado2!",
+    "cargo": "Desarrolladora Frontend",
+    "tipo": "empleado",
+    "id_area": 1,
+    "id_jefe": 2
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Morales",
+    "edad": 26,
+    "usuario": "lmorales",
+    "password": "Empleado3!",
+    "cargo": "Diseñador UI",
+    "tipo": "empleado",
+    "id_area": 2,
+    "id_jefe": 3
+  },
+  {
+    "nombre": "Camila",
+    "apellido": "Reyes",
+    "edad": 24,
+    "usuario": "creyes",
+    "password": "Empleado4!",
+    "cargo": "Diseñadora UX",
+    "tipo": "empleado",
+    "id_area": 2,
+    "id_jefe": 3
+  },
+  {
+    "nombre": "Jorge",
+    "apellido": "Núñez",
+    "edad": 28,
+    "usuario": "jnunez",
+    "password": "Empleado5!",
+    "cargo": "Analista de Marketing",
+    "tipo": "empleado",
+    "id_area": 3,
+    "id_jefe": 4
+  },
+  {
+    "nombre": "Isabella",
+    "apellido": "Paredes",
+    "edad": 31,
+    "usuario": "iparedes",
+    "password": "Empleado6!",
+    "cargo": "Tester QA",
+    "tipo": "empleado",
+    "id_area": 5,
+    "id_jefe": 6
+  }
+]

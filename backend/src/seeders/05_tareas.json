@@ -1,0 +1,111 @@
+// API: POST /api/tareas/
+// Requiere token de administrador o encargado: Authorization: Bearer <token>
+// Depende de: proyectos (03) y empleados (02) — insertar después de ambos
+//
+// Valores válidos para "estado": "pendiente" | "en progreso" | "completada" | "retrasada"
+//
+// id_proyecto: 1=Portal Web | 2=App Móvil | 3=Campaña Q2 | 4=Migración Nube | 5=Onboarding
+// id_empleado: 7=Pedro(Dev) | 8=Valentina(Dev) | 9=Luis(Diseño) | 10=Camila(Diseño)
+//              11=Jorge(Marketing) | 12=Isabella(QA)
+[
+  // --- Proyecto 1: Rediseño del Portal Web ---
+  {
+    "nombre": "Levantar requerimientos del portal",
+    "fecha_entrega": "2026-01-20",
+    "estado": "completada",
+    "id_proyecto": 1,
+    "id_empleado": 8
+  },
+  {
+    "nombre": "Diseño de wireframes",
+    "fecha_entrega": "2026-02-10",
+    "estado": "completada",
+    "id_proyecto": 1,
+    "id_empleado": 9
+  },
+  {
+    "nombre": "Desarrollo del módulo de autenticación",
+    "fecha_entrega": "2026-03-15",
+    "estado": "en progreso",
+    "id_proyecto": 1,
+    "id_empleado": 7
+  },
+  {
+    "nombre": "Pruebas de integración portal",
+    "fecha_entrega": "2026-04-15",
+    "estado": "pendiente",
+    "id_proyecto": 1,
+    "id_empleado": 12
+  },
+
+  // --- Proyecto 2: App Móvil de Gestión Interna ---
+  {
+    "nombre": "Definir arquitectura de la app",
+    "fecha_entrega": "2026-02-20",
+    "estado": "completada",
+    "id_proyecto": 2,
+    "id_empleado": 7
+  },
+  {
+    "nombre": "Diseño de pantallas principales",
+    "fecha_entrega": "2026-03-10",
+    "estado": "en progreso",
+    "id_proyecto": 2,
+    "id_empleado": 10
+  },
+  {
+    "nombre": "Desarrollar API REST para la app",
+    "fecha_entrega": "2026-04-30",
+    "estado": "en progreso",
+    "id_proyecto": 2,
+    "id_empleado": 8
+  },
+  {
+    "nombre": "Testing de rendimiento app",
+    "fecha_entrega": "2026-06-30",
+    "estado": "pendiente",
+    "id_proyecto": 2,
+    "id_empleado": 12
+  },
+
+  // --- Proyecto 3: Campaña de Marketing Q2 ---
+  {
+    "nombre": "Análisis de mercado objetivo",
+    "fecha_entrega": "2026-03-20",
+    "estado": "en progreso",
+    "id_proyecto": 3,
+    "id_empleado": 11
+  },
+  {
+    "nombre": "Crear contenido para redes sociales",
+    "fecha_entrega": "2026-04-15",
+    "estado": "pendiente",
+    "id_proyecto": 3,
+    "id_empleado": 11
+  },
+
+  // --- Proyecto 4: Migración a la Nube ---
+  {
+    "nombre": "Inventario de servicios actuales",
+    "fecha_entrega": "2025-12-01",
+    "estado": "retrasada",
+    "id_proyecto": 4,
+    "id_empleado": 7
+  },
+  {
+    "nombre": "Configuración del entorno cloud",
+    "fecha_entrega": "2026-01-31",
+    "estado": "retrasada",
+    "id_proyecto": 4,
+    "id_empleado": 8
+  },
+
+  // --- Proyecto 5: Sistema de Onboarding RRHH ---
+  {
+    "nombre": "Mapear proceso de onboarding actual",
+    "fecha_entrega": "2026-04-01",
+    "estado": "pendiente",
+    "id_proyecto": 5,
+    "id_empleado": 7
+  }
+]

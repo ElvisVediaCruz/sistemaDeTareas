@@ -1,0 +1,37 @@
+// API: POST /api/proyectos/
+// Requiere token de administrador: Authorization: Bearer <token>
+// No tiene dependencias FK externas — insertar antes de areas_proyectos y tareas
+//
+// Valores válidos para "estado": "pendiente" | "en progreso" | "completado" | "retrasado"
+[
+  {
+    "nombre": "Rediseño del Portal Web",
+    "fecha_inicio": "2026-01-10",
+    "fecha_entrega": "2026-04-30",
+    "estado": "en progreso"
+  },
+  {
+    "nombre": "App Móvil de Gestión Interna",
+    "fecha_inicio": "2026-02-01",
+    "fecha_entrega": "2026-07-15",
+    "estado": "en progreso"
+  },
+  {
+    "nombre": "Campaña de Marketing Q2",
+    "fecha_inicio": "2026-03-01",
+    "fecha_entrega": "2026-06-30",
+    "estado": "pendiente"
+  },
+  {
+    "nombre": "Migración a la Nube",
+    "fecha_inicio": "2025-11-01",
+    "fecha_entrega": "2026-02-28",
+    "estado": "retrasado"
+  },
+  {
+    "nombre": "Sistema de Onboarding RRHH",
+    "fecha_inicio": "2026-03-15",
+    "fecha_entrega": "2026-09-01",
+    "estado": "pendiente"
+  }
+]
