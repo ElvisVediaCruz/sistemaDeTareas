@@ -1,0 +1,12 @@
+// API: POST /api/auth/register  (para crear el primer admin sin token)
+{
+    "nombre": "Carlos",
+    "apellido": "Mendoza",
+    "edad": 38,
+    "usuario": "cmendoza",
+    "password": "Admin1234!",
+    "cargo": "Gerente General",
+    "tipo": "administrador",
+    "id_area": 1,
+    "id_jefe": null
+}
